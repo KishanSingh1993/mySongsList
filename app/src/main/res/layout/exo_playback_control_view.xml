@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<!--    <com.google.android.exoplayer2.ui.PlaybackControlView-->
+<!--        android:id="@+id/exo_playback_control_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        app:show_timeout="5000"-->
+<!--        app:controller_layout_id="@layout/exo_media_controller"-->
+<!--        app:hide_on_touch="true"-->
+<!--        tools:ignore="MissingClass" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
