@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/albumImage"
@@ -13,51 +12,66 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/songTitle"
+        app:layout_constraintBottom_toTopOf="@+id/titlePriceContainer"
         android:layout_marginTop="16dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         app:srcCompat="@drawable/ic_launcher_foreground"
         android:contentDescription="@string/album_image"
-        android:scaleType="centerCrop"
-         />
+        android:scaleType="centerCrop"/>
 
-    <TextView
-        android:id="@+id/songTitle"
+    <LinearLayout
+        android:id="@+id/titlePriceContainer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textAlignment="center"
+        android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/albumImage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        tools:text="Song Title" />
+        android:layout_marginEnd="16dp">
+
+        <TextView
+            android:id="@+id/songTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Song Title"/>
+
+        <TextView
+            android:id="@+id/songPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
 
     <com.google.android.exoplayer2.ui.PlayerView
         android:id="@+id/playerView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/songTitle"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@+id/titlePriceContainer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/playButton"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:controller_layout_id="@layout/exo_media_controller" />
+        app:controller_layout_id="@layout/exo_media_controller"/>
 
     <Button
         android:id="@+id/playButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/play_song"
-        app:layout_constraintTop_toBottomOf="@+id/songTitle"
+        app:layout_constraintTop_toBottomOf="@+id/playerView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

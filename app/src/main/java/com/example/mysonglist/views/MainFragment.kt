@@ -56,6 +56,8 @@ class MainFragment : Fragment() {
             putString("title", song.title)
             putString("imageUrl", song.imageUrl)
             putString("link", song.link)
+            putString("amount", song.amount)
+            putString("currency", song.currency)
         }
         findNavController().navigate(R.id.action_mainFragment_to_detailFragment, bundle)
     }

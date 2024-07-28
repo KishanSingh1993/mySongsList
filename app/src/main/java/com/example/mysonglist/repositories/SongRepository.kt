@@ -55,6 +55,9 @@ class SongRepository(private val songDao: SongDao, private val apiService: ApiSe
                 val images = element.getElementsByTagName("im:image")
                 val mp4aLink = mutableListOf<Link>()
                 val mp4aImages = mutableListOf<Image>()
+                val priceElement = element.getElementsByTagName("im:price").item(0) as Element
+                val amount = priceElement.getAttribute("amount")
+                val currency = priceElement.getAttribute("currency")
 
                 for (j in 0 until links.length) {
                     val linkElement = links.item(j) as Element
@@ -78,7 +81,9 @@ class SongRepository(private val songDao: SongDao, private val apiService: ApiSe
                             id = id.orEmpty(),
                             title = title.orEmpty(),
                             imageUrl = mp4aImages[0].url.orEmpty(),
-                            link = mp4aLink[0].href.orEmpty()
+                            link = mp4aLink[0].href.orEmpty(),
+                            amount = amount.orEmpty(),
+                            currency = currency.orEmpty()
                         )
                     )
                 }

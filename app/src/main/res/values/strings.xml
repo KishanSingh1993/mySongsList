@@ -51,4 +51,5 @@
     <string name="exo_controls_pause">exo_controls_pause</string>
     <string name="play">Play</string>
     <string name="pause">Pause</string>
+    <string name="price">Price</string>
 </resources>

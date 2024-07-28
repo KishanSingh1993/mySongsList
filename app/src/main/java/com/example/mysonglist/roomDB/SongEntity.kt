@@ -14,5 +14,7 @@ data class SongEntity(
     @PrimaryKey val id: String,
     val title: String,
     val imageUrl: String,
-    val link: String
+    val link: String,
+    val amount: String,
+    val currency: String
 )

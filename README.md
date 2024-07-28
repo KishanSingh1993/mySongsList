@@ -1,7 +1,7 @@
 
 # My Song List App
 
-An made in Android using Kotlin, Retrofit, Room DB & ExoPlayer to display and play songs.
+An App made in Android using Kotlin, Retrofit, Room DB & ExoPlayer to display and play songs.
 
 
 # Screenshot

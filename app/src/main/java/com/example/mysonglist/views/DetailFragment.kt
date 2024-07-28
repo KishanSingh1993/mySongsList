@@ -36,15 +36,18 @@ class DetailFragment : Fragment() {
         val title = arguments?.getString("title")
         val imageUrl = arguments?.getString("imageUrl")
         val link = arguments?.getString("link")
-
+        val amount = arguments?.getString("amount")
+        val currency = arguments?.getString("currency")
         // Log the data
         Log.d("DetailFragment", "ID: $id")
         Log.d("DetailFragment", "Title: $title")
         Log.d("DetailFragment", "Image URL: $imageUrl")
         Log.d("DetailFragment", "Link: $link")
+        Log.d("DetailFragment", "AMount: $amount")
 
         // Display the data
         binding.songTitle.text = title
+        "Price: $amount $currency".also { binding.songPrice.text = it }
         imageUrl?.let { Picasso.get().load(it).into(binding.albumImage) }
 
         // Initialize ExoPlayer
@@ -62,6 +65,7 @@ class DetailFragment : Fragment() {
         // Set up button to play/pause
         binding.playButton.setOnClickListener {
             binding.playerView.visibility = View.VISIBLE
+            binding.playButton.visibility = View.GONE
             if (exoPlayer?.isPlaying == true) {
                 exoPlayer?.pause()
                 binding.playButton.text = getString(R.string.play)
