@@ -7,6 +7,7 @@ An App made in Android using Kotlin, Retrofit, Room DB & ExoPlayer to display an
 # Screenshot
 
 <img src="/ss/songlist.png" height="400px"/> || <img src="/ss/songdetails.png" height="400px"/>
+<img src="/ss/ss3.png" height="400px"/>
 
 # Video
 
